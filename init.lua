@@ -256,7 +256,7 @@ minetest.register_node("simple_machines:dig_machine", {
 	description = "Digging machine",
 	tiles = {"default_steel_block.png","default_wood.png"},
 	groups = {snappy=1,bendy=2,cracky=1},
-	sounds = default_stone_sounds,
+	sounds = default.node_sound_stone_defaults(),
 	on_construct = function(pos)
 		set_machine_meta(pos, "")
 	end,
