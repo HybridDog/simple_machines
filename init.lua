@@ -97,7 +97,7 @@ minetest.chat_send_all(dir.." is no anw 2")
 	local tab = {}
 	local path = full_path
 	local count = #path
-	for i = 1, count do		
+	for i = 1, count do
 		tab[i] = path[math.abs(i-1-count)]
 	end
 	return tab
@@ -275,4 +275,4 @@ minetest.register_node("simple_machines:dig_machine", {
 	end
 })
 
-print(string.format("[simple_machines] loaded after ca. %.2fs", os.clock() - load_time_start))
+minetest.log("info", string.format("[simple_machines] loaded after ca. %.2fs", os.clock() - load_time_start))
